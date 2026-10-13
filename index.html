@@ -1,0 +1,713 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÓRBITA TECH — O futuro começa aqui</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #080a12;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .site {
+      width: min(1100px, 94%);
+      margin: 20px auto;
+    }
+
+    /* CABEÇALHO */
+
+    header {
+      min-height: 145px;
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+      border: 3px solid black;
+      background:
+        radial-gradient(circle at 85% 30%, #38d86e, transparent 25%),
+        linear-gradient(110deg, #030303, #101626, #061b0c);
+    }
+
+    header small {
+      color: #b9ffb8;
+      letter-spacing: 3px;
+    }
+
+    header h1 {
+      margin: 10px 0;
+      color: #66ef9b;
+      font: italic bold 46px Georgia, serif;
+    }
+
+    header p {
+      font: italic 17px Georgia, serif;
+    }
+
+    .computer {
+      font-size: 65px;
+      color: #ff9fd0;
+    }
+
+    .copyright {
+      margin: 5px 0 10px;
+      font: 11px "Courier New", monospace;
+    }
+
+    /* MENU */
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 12px 0 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      min-width: 100px;
+      padding: 8px;
+      color: #111b88;
+      text-align: center;
+      text-decoration: none;
+      font: bold 18px Georgia, serif;
+      border-radius: 5px;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #eeeeff;
+      text-decoration: underline;
+    }
+
+    .planet {
+      display: block;
+      margin: 0 auto 7px;
+      font-size: 32px;
+    }
+
+    /* ORGANIZAÇÃO PRINCIPAL */
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 230px;
+      gap: 30px;
+      margin-top: 25px;
+    }
+
+    main {
+      min-width: 0;
+    }
+
+    .welcome {
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    /* BANNER */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+      display: flex;
+      align-items: center;
+      padding: 28px;
+      color: white;
+      border: 2px solid #111;
+      background:
+        radial-gradient(circle at 80% 45%, #ffdb85, #a62270 12%, transparent 28%),
+        linear-gradient(120deg, #080b25, #25205e, #090a15);
+    }
+
+    .hero::after {
+      content: "✦";
+      position: absolute;
+      right: 8%;
+      top: 10px;
+      color: #b7f7ff;
+      font-size: 140px;
+      text-shadow: 0 0 25px #ff9fd0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 430px;
+    }
+
+    .eyebrow {
+      color: #8bffcb;
+      font: bold 12px "Courier New", monospace;
+      letter-spacing: 2px;
+    }
+
+    .hero h2 {
+      font: bold 38px Georgia, serif;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      line-height: 1.6;
+      color: #e5e7ff;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 16px;
+      color: #080a12;
+      background: #8bffcb;
+      border: 2px outset white;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #ff9fd0;
+    }
+
+    /* CONTEÚDO */
+
+    .section {
+      padding: 25px 0;
+    }
+
+    .section h2 {
+      color: #141b7b;
+      font: bold 27px Georgia, serif;
+    }
+
+    .section p {
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      padding: 16px;
+      border: 1px solid #b7b9d8;
+      background: linear-gradient(white, #f3f2ff);
+      box-shadow: 3px 3px 0 #d8d7f1;
+    }
+
+    .card .symbol {
+      font-size: 30px;
+    }
+
+    .card h3 {
+      color: #171d7a;
+      font: bold 18px Georgia, serif;
+    }
+
+    .card p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ANÚNCIOS LATERAIS */
+
+    aside {
+      padding-top: 10px;
+    }
+
+    .ad {
+      margin-bottom: 20px;
+      padding: 15px 10px;
+      min-height: 230px;
+      color: white;
+      text-align: center;
+      background: #050509;
+      border: 2px solid #111;
+    }
+
+    .ad h3 {
+      font: 21px Georgia, serif;
+    }
+
+    .ad-art {
+      font-size: 70px;
+      margin: 20px 0;
+    }
+
+    .ad p {
+      font: 17px Georgia, serif;
+    }
+
+    .ad strong {
+      color: #8bffcb;
+    }
+
+    .sale {
+      margin: 10px 0;
+      color: #2851cb;
+      text-align: center;
+      font: bold 25px Georgia, serif;
+    }
+
+    .sale-card {
+      padding: 18px 10px;
+      color: #7a142d;
+      text-align: center;
+      border: 3px ridge #ff83c3;
+      background: repeating-linear-gradient(
+        135deg,
+        white 0 8px,
+        #ffd9eb 8px 16px
+      );
+    }
+
+    .sale-card h3 {
+      font: bold 23px Georgia, serif;
+    }
+
+    /* PÁGINAS E RODAPÉ */
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+      animation: appear 0.25s ease;
+    }
+
+    @keyframes appear {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      margin-top: 30px;
+      padding: 20px 10px;
+      color: #555577;
+      text-align: center;
+      font: 12px "Courier New", monospace;
+      border-top: 2px dotted #aaaacc;
+    }
+
+    /* RESPONSIVIDADE */
+
+    @media (max-width: 760px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .sale {
+        grid-column: 1 / -1;
+      }
+
+      header h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 440px) {
+      .computer {
+        display: none;
+      }
+
+      nav {
+        gap: 5px;
+      }
+
+      nav a {
+        min-width: 85px;
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 20px;
+      }
+
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      aside {
+        grid-template-columns: 1fr;
+      }
+
+      .sale {
+        grid-column: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="site">
+
+    <!-- CABEÇALHO -->
+    <header>
+      <div>
+        <small>TECNOLOGIA • CRIATIVIDADE • FUTURO</small>
+        <h1>ÓRBITA TECH</h1>
+        <p>“O futuro começa aqui.”</p>
+      </div>
+
+      <div class="computer">▣</div>
+    </header>
+
+    <div class="copyright">
+      © 1996–2026 ÓRBITA TECH INC. — EXPLORANDO NOVAS POSSIBILIDADES
+    </div>
+
+    <!-- MENU DE NAVEGAÇÃO -->
+    <nav>
+      <a href="#home" class="active" data-page="home">
+        <span class="planet">🌎</span>
+        Home
+      </a>
+
+      <a href="#sobre" data-page="sobre">
+        <span class="planet">🪐</span>
+        Sobre Nós
+      </a>
+
+      <a href="#servicos" data-page="servicos">
+        <span class="planet">💾</span>
+        Serviços
+      </a>
+    </nav>
+
+    <div class="layout">
+
+      <main>
+
+        <!-- PÁGINA HOME -->
+        <section class="page active" id="home">
+
+          <p class="welcome">
+            <strong>Bem-vindo ao site da ÓRBITA TECH!</strong>
+            Um espaço onde ideias ousadas encontram tecnologia.
+            Explore nossas páginas e descubra o que estamos
+            construindo para o amanhã.
+          </p>
+
+          <div class="hero">
+            <div class="hero-content">
+              <div class="eyebrow">
+                SINAL RECEBIDO • SISTEMA ONLINE
+              </div>
+
+              <h2>O futuro está a um clique de distância.</h2>
+
+              <p>
+                Conectamos criatividade e inovação para transformar
+                possibilidades em soluções reais.
+              </p>
+
+              <a href="#servicos" class="button" data-goto="servicos">
+                Explorar serviços »
+              </a>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Novidades da órbita</h2>
+
+            <p>
+              Estamos sempre explorando novas ideias, desenvolvendo
+              ferramentas e encontrando maneiras inteligentes de
+              resolver desafios.
+            </p>
+
+            <div class="cards">
+              <article class="card">
+                <div class="symbol">🛰️</div>
+                <h3>Novas ideias</h3>
+                <p>
+                  Pesquisa e experimentação para descobrir
+                  o que vem depois.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">💿</div>
+                <h3>Tecnologia</h3>
+                <p>
+                  Soluções digitais pensadas para simplificar
+                  o dia a dia.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">✨</div>
+                <h3>Futuro</h3>
+                <p>
+                  Um olhar curioso para as possibilidades
+                  que ainda virão.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PÁGINA SOBRE NÓS -->
+        <section class="page" id="sobre">
+
+          <p class="welcome">
+            <strong>Conheça a ÓRBITA TECH.</strong>
+            Acreditamos que a tecnologia é mais interessante
+            quando abre espaço para a imaginação.
+          </p>
+
+          <div class="hero">
+            <div class="hero-content">
+              <div class="eyebrow">QUEM SOMOS</div>
+
+              <h2>Curiosidade é o nosso combustível.</h2>
+
+              <p>
+                Somos uma equipe que gosta de investigar,
+                criar e transformar ideias em experiências úteis.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>Sobre nós</h2>
+
+            <p>
+              A ÓRBITA TECH nasceu com uma missão simples:
+              olhar para os desafios de hoje com a curiosidade
+              de quem imagina o amanhã.
+            </p>
+
+            <p>
+              Unimos pensamento criativo, pesquisa e tecnologia
+              para desenvolver soluções que façam sentido para
+              pessoas e organizações.
+            </p>
+
+            <div class="cards">
+              <article class="card">
+                <div class="symbol">🔭</div>
+                <h3>Visão</h3>
+                <p>
+                  Explorar possibilidades e tornar a tecnologia
+                  mais acessível.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">🧭</div>
+                <h3>Propósito</h3>
+                <p>
+                  Resolver problemas com criatividade,
+                  cuidado e clareza.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">🤝</div>
+                <h3>Valores</h3>
+                <p>
+                  Curiosidade, colaboração, transparência
+                  e responsabilidade.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- PÁGINA SERVIÇOS -->
+        <section class="page" id="servicos">
+
+          <p class="welcome">
+            <strong>Nossos serviços.</strong>
+            Ferramentas e soluções para levar suas ideias
+            do rascunho ao próximo nível.
+          </p>
+
+          <div class="hero">
+            <div class="hero-content">
+              <div class="eyebrow">FERRAMENTAS PARA IR ALÉM</div>
+
+              <h2>Boas ideias merecem sair do papel.</h2>
+
+              <p>
+                Conheça algumas das maneiras pelas quais
+                podemos ajudar seu projeto a decolar.
+              </p>
+            </div>
+          </div>
+
+          <div class="section">
+            <h2>O que fazemos</h2>
+
+            <div class="cards">
+              <article class="card">
+                <div class="symbol">🖥️</div>
+                <h3>Desenvolvimento digital</h3>
+                <p>
+                  Criação de sites e experiências digitais
+                  com foco em clareza e usabilidade.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">🧠</div>
+                <h3>Pesquisa e inovação</h3>
+                <p>
+                  Estudo de ideias, tecnologias e possibilidades
+                  para novos projetos.
+                </p>
+              </article>
+
+              <article class="card">
+                <div class="symbol">⚙️</div>
+                <h3>Consultoria tecnológica</h3>
+                <p>
+                  Apoio para identificar ferramentas e caminhos
+                  que façam sentido para sua equipe.
+                </p>
+              </article>
+            </div>
+
+            <p>
+              Quer conversar sobre um projeto?
+              Entre em contato pelo e-mail
+              <a href="mailto:contato@orbitatech.example">
+                contato@orbitatech.example
+              </a>.
+            </p>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ANÚNCIOS LATERAIS -->
+      <aside>
+        <div class="ad">
+          <h3>O futuro está borbulhando.</h3>
+
+          <div class="ad-art">☂️</div>
+
+          <p>Não fique para trás no tempo.</p>
+          <p><strong>Conecte-se!</strong></p>
+        </div>
+
+        <div class="sale">✦ OFERTAS ✦</div>
+
+        <div class="sale-card">
+          <h3>
+            GRANDES IDEIAS, GRANDES POSSIBILIDADES
+          </h3>
+
+          <p>
+            Novas ferramentas. Novos caminhos.
+            Um universo para explorar.
+          </p>
+
+          <div style="font-size: 40px; margin-top: 10px;">
+            🌐
+          </div>
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer>
+      ÓRBITA TECH © 2026 · FEITO COM CURIOSIDADE E NOSTALGIA
+      <br><br>
+      Melhor visualizado com imaginação ilimitada ✦
+    </footer>
+
+  </div>
+
+  <!-- FUNCIONAMENTO DO MENU -->
+  <script>
+    const links = document.querySelectorAll("[data-page]");
+    const pages = document.querySelectorAll(".page");
+
+    function showPage(pageId) {
+      const selectedPage = document.getElementById(pageId);
+
+      if (!selectedPage) {
+        pageId = "home";
+      }
+
+      pages.forEach(function(page) {
+        page.classList.toggle("active", page.id === pageId);
+      });
+
+      links.forEach(function(link) {
+        const active = link.dataset.page === pageId;
+
+        link.classList.toggle("active", active);
+
+        if (active) {
+          link.setAttribute("aria-current", "page");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+
+      history.replaceState(null, "", "#" + pageId);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+    links.forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        showPage(link.dataset.page);
+      });
+    });
+
+    document.querySelectorAll("[data-goto]").forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        showPage(link.dataset.goto);
+      });
+    });
+
+    window.addEventListener("hashchange", function() {
+      showPage(location.hash.slice(1));
+    });
+
+    if (location.hash) {
+      showPage(location.hash.slice(1));
+    }
+  </script>
+
+</body>
+</html>
