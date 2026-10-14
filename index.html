@@ -20,25 +20,39 @@
             margin: 0 auto;
         }
 
-        header {
-            height: 80px;
-            background-color: black;
-            color: green;
-            text-align: center;
-            padding: 10px;
-        }
 
-        header h1 {
-            font-family: Georgia, serif;
-            font-style: italic;
-            margin: 10px;
-        }
+header {
+    width: 100%;
+    height: 180px;
+    box-sizing: border-box;
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjbb4LpKIcfUYtElgpMn2vSCs_VNulxv3J_DWxUH8oomgFXW6Ii6Xcq1JvhSGEE3m2bqumAaYSJq8uLSKboAjGXnNYIXyCoIaA2lMSzkc1sTwG-fywduLzZngjKgR89AFr2geKeVT_-y2n8O8X3CvmtAUVQKOTSiZoNZML9EdlXTs4fkyhn4QeCcQ3rtXE/s1600/image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
 
-        header p {
-            color: white;
-            margin: 0;
-            font-size: 12px;
-        }
+header h1 {
+    font-family: Georgia, serif;
+    font-style: italic;
+    margin: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+header p {
+    color: white;
+    margin: 0;
+    font-size: 12px;
+    text-shadow: 1px 1px 3px black;
+}
+
 
         .menu {
             display: flex;
@@ -59,11 +73,15 @@
             text-decoration: underline;
         }
 
-        .icone {
-            display: block;
-            font-size: 28px;
-            margin-bottom: 3px;
-        }
+
+.icone {
+    display: block;
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 auto 3px;
+}
+
 
         .conteudo {
             display: flex;
@@ -177,6 +195,51 @@
     color: #444444;
 }
 
+        
+#caixa-senha {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px solid #999;
+}
+
+#caixa-senha label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+#caixa-senha p {
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+#senha-local {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #555;
+    margin-bottom: 7px;
+}
+
+#caixa-senha button {
+    width: 100%;
+    padding: 6px;
+    background-color: black;
+    color: white;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+#caixa-senha button:hover {
+    background-color: #333;
+}
+
+#mensagem-senha {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+}
+
     </style>
 </head>
 
@@ -186,35 +249,55 @@
 
     <!-- CABEÇALHO -->
     <header>
-        <h1>Homens Bem-Vestidos</h1>
-        <p>Jogos justos sempre acabam em empate</p>
+        <h1></h1>
+        <p></p>
     </header>
 
     <small>© 1935 HBV INC.</small>
 
     <!-- MENU -->
-    <nav class="menu">
-        <a href="#" onclick="mostrar('home'); return false;">
-            <span class="icone">🌎</span>
-            Home
-        </a>
+   
+<nav class="menu">
+    <!-- HOME -->
+    <a href="#" onclick="mostrar('home'); return false;">
+        <img
+            class="icone"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhB90QhZAFu8YEPN0V3YOt4fRdn18Wj73onkVOl0a7jgL-29nbB6aGlkre4A6wBoC6yPmAajsmelHAdoHXODI7SgYA8tKb3jhus-zz-F6aQTgH2HZQ5d-MmH77dVNOYwhkyOs8wIVWmJ4j8N7DtT2l-cSZ1AUXEh6QrXiPKAbUBjqlofJgCQTvPklJr1-sw/s1600/image.png"
+            alt="Ícone Home"
+        >
+        Início
+    </a>
 
-        <a href="#" onclick="mostrar('sobre'); return false;">
-            <span class="icone">🪐</span>
-            Sobre Nós
-        </a>
+    <!-- SERVIÇOS -->
+    <a href="#" onclick="mostrar('servicos'); return false;">
+        <img
+            class="icone"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKXlM3CGJcEO7c1vWFka2oKPQ8g6JtEgFghkPcoRY-v_OfxJbiMba9iwMdtbwtz2kNwM2QJjLNPNSyBSRZ-bpJRAAeWs5O5bDqBHfIPB7q562faegYY2z8yiel8T-r3Gp0Zm5QCLb9xi3OD2EKS0m0ruhwSQMR-iR_nxNuHTzbUEKVJWVPDzQEOicg2m_5/s1600/image.png"
+            alt="Ícone Serviços"
+        >
+        Serviços
+    </a>
 
-        <a href="#" onclick="mostrar('servicos'); return false;">
-            <span class="icone">💻</span>
-            Serviços
-        </a>
-        
-<a href="#" onclick="mostrar('parceiros'); return false;">
-    <span class="icone">🤝</span>
-    Nossos Parceiros
-</a>
+    <!-- PARCEIROS -->
+    <a href="#" onclick="mostrar('parceiros'); return false;">
+        <img
+            class="icone"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg6Y6Y5YANhCxERtvPHk0-rl3QZKsEayZhC8wsoG-ms6Tbb1S_D7EjWXck4z4wX6BIsnx8QfB0pZeWjg3eRWKPOUeLJysPAhompiRn0MvuIv1JH1tvbFRe0lAFl4boYmSN8cwzWRiNAqna78BlkF2cfNWSEoGhyphenhyphenCoXN8p13tHwcHJJ2sJp4M5IEvDVDSnJV/s1600/image.png"
+            alt="Ícone Parceiros"
+        >
+        Parceiros
+    </a>
+        <!-- SOBRE NÓS -->
+    <a href="#" onclick="mostrar('sobre'); return false;">
+        <img
+            class="icone"
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhsszWAv0YdwAXCutJAXg9zeAjlGED_Apyo79KcSWUQquKRek112WwMGP0sfLrtDaVtt8gBDgu5Jht9UtHJpTG5qoyv5UQGYCX1Co3Wl9NGg9ns2jBBQcLXs5D7VB72APmOqaQzHfLbWPPNoxLsMO2_Z9xQmAvXpayVuVFYFBVFd3qx_gcSiXhIsOuMNf6m/s1600/image.png"
+            alt="Ícone Sobre Nós"
+        >
+        Sobre Nós
+    </a>
+</nav>
 
-    </nav>
 
     <hr>
 
@@ -223,19 +306,17 @@
 
         <main>
 
-            <!-- HOME -->
+            <!-- INÍCIO -->
             <section id="home" class="pagina ativa">
                 <h2>
-                    Sinta-se livre para navegar no site obrigatório.
+                    Bem-vindo(a) ao nosso site.
                 </h2>
 
                 <p>
-                    Louvável. Explore nosso site e conheça
-                    um pouco mais sobre nós e nossos serviços.
-                    Fique à vontade.
+                    Escolha qualquer uma das opções acima para explorar o site. Sinta-se em casa.
                 </p>
 
-                <h2>Bem-vindo ao futuro</h2>
+                <h2>O futuro nos espera.</h2>
 
                 <p>
                     A tecnologia está sempre evoluindo, assim como nós, participe dessa mutação conosco.
@@ -278,12 +359,20 @@
 
                 <h2>Consultoria</h2>
                 <p>
-                    Consultas conosco e com nossos superiores abrem seu corpo para novas ideias revolucionárias, mais de 130 clientes satisfeitos.
-                </p>
+                    Consultas conosco e com nossa corporação abrem seu corpo para novas ideias revolucionárias, mais de 130 clientes satisfeitos.
+                    </p>
+                    
+                    <p>"A consultoria nos ajudou a entender a como utilizar do nosso corpo de uma maneira muito mais eficiente, necessário para qualquer pessoa" - Anastácio e Luka Fuchs sobre a consultoria de Equilíbrio Corporal.</p>
+                    <p>Segue abaixo todas as consultorias da nossa corporação disponíveis:</p>
+                
+                <p>Consultoria de Equilíbrio Corporal: Especializado em alinhar seu sistema interno para melhor funcionamento do corpo, prevenindo problemas durante o envelhecimento, e reprimindo pensamentos inoportúnos. E também diminuir sentimentos predatórios, como inveja, culpa excessiva, competitividade, repulso, etc.</p>
+                <p>Consultoria de Cuidados com a Pele: Especializado no tratamento de bulbos infeccionais com hidratantes e massagens corporais, o tratamento enraíza tão profundamente em sua pele que pode até mesmo fortificar seus ossos.</p>
+                <p>Consultoria de Gerenciamento de Tempo (feito por nós): Especializado em te ensinar como organizar melhor sua rotina, poupando tempo e tirando eventos desnecessários do dia-a-dia, otimizando seu tempo útil e de lazer.</p>
+                <p>Para contratar qualquer um desses serviços contate o email: univ.toulousehbvacess@gmail.com</p>
 
                 <h2>Pesquisa tecnológica</h2>
                 <p>
-                    Em nosso tempo vago, fazemos pesquisas e desenvolvemos criações cada vez mais inovadoras e relevantes para a sociedade.
+                    Em nosso tempo vago, fazemos pesquisas e desenvolvemos criações cada vez mais inovadoras e relevantes para a sociedade. Nos últimos dias nós nos especializamos cada vez mais na área da produção de sistemas operacionais para otimizar tempo de pesquisa e desenvolvimento de programas.
                 </p>
 
                 <h2>Evolução</h2>
@@ -317,7 +406,7 @@
 
     <h2>██████████</h2>
     <p>
-        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+Nos transformou na melhor versão de nós mesmos    
     </p>
 
     <h2>Investidores Internos</h2>
@@ -365,6 +454,27 @@
         <option value="local">Dialeto local</option>
     </select>
 
+    <!-- CAIXA DE SENHA DO DIALETO LOCAL -->
+    <div id="caixa-senha" style="display: none;">
+        <label for="senha-local">Acesso restrito</label>
+
+        <p>Digite a senha para acessar o dialeto local:</p>
+
+        <form onsubmit="verificarSenha(event)">
+            <input
+                type="password"
+                id="senha-local"
+                placeholder="Digite a senha"
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit">Acessar</button>
+        </form>
+
+        <small id="mensagem-senha"></small>
+    </div>
+
     <div id="google_translate_element"
          style="display:none;"></div>
 
@@ -375,9 +485,11 @@
 
     <!-- RODAPÉ -->
     <footer>
-        HBV INC. © 1935
+        Copyright © 1935 HBV Inc.
         <br>
-        Todos os direitos reservados.
+        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤSite desenvolvido utilizando Sistema Computacional Raíz por ████████████████████™
+        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+        Site hospedado e em operação a partir do Armazenamento Lógico PYF™ do Programa Recreativo da Ilha de Páscoa e Polinésia Francesa (PRIPP)™
     </footer>
 
 </div>
@@ -404,38 +516,66 @@
         }, 'google_translate_element');
     }
 
-    function traduzirPagina() {
-        const idioma = document.getElementById('idioma').value;
-        const mensagem = document.getElementById('mensagem-traducao');
 
-        if (idioma === 'local') {
-            mensagem.textContent =
-                'Dialeto local: tradução personalizada ainda não configurada.';
-            return;
-        }
+function traduzirPagina() {
+    const idioma = document.getElementById('idioma').value;
+    const mensagem = document.getElementById('mensagem-traducao');
+    const caixaSenha = document.getElementById('caixa-senha');
+    const campoSenha = document.getElementById('senha-local');
+    const mensagemSenha = document.getElementById('mensagem-senha');
 
-        if (!idioma) {
-            mensagem.textContent = 'Selecione um idioma.';
-            return;
-        }
+    // Esconde a caixa de senha sempre que necessário
+    caixaSenha.style.display = 'none';
+    campoSenha.value = '';
+    mensagemSenha.textContent = '';
 
-        const seletor = document.querySelector(
-            '.goog-te-combo'
-        );
-
-        if (!seletor) {
-            mensagem.textContent =
-                'O tradutor está carregando. Tente novamente em instantes.';
-            return;
-        }
-
-        seletor.value = idioma;
-        seletor.dispatchEvent(
-            new Event('change')
-        );
-
-        mensagem.textContent = 'Solicitando tradução...';
+    if (idioma === 'local') {
+        caixaSenha.style.display = 'block';
+        mensagem.textContent = 'Acesso restrito ao dialeto local.';
+        return;
     }
+
+    if (!idioma) {
+        mensagem.textContent = 'Selecione um idioma.';
+        return;
+    }
+
+    const seletor = document.querySelector('.goog-te-combo');
+
+    if (!seletor) {
+        mensagem.textContent =
+            'O tradutor está carregando. Tente novamente em instantes.';
+        return;
+    }
+
+    seletor.value = idioma;
+    seletor.dispatchEvent(new Event('change'));
+
+    mensagem.textContent = 'Solicitando tradução...';
+}
+
+function verificarSenha(event) {
+    event.preventDefault();
+
+    const senha = document.getElementById('senha-local').value;
+    const mensagem = document.getElementById('mensagem-senha');
+
+    // ALTERE ESTA SENHA PARA A QUE VOCÊ QUISER
+    const senhaCorreta = 'HBV1935';
+
+    if (senha === senhaCorreta) {
+        mensagem.textContent = 'Acesso autorizado. Bem-vindo.';
+        mensagem.style.color = 'green';
+
+        // Aqui você pode liberar o conteúdo do dialeto local
+        document.getElementById('mensagem-traducao').textContent =
+            'Dialeto local desbloqueado.';
+    } else {
+        mensagem.textContent = 'Senha incorreta. Acesso negado.';
+        mensagem.style.color = 'red';
+    }
+}
+
 </script>
 
 <script
