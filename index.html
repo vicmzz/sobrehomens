@@ -332,6 +332,12 @@ body.dialeto-corrompido #feedback-avaliacao {
     border: 1px solid #ffaaaa;
 }
 
+        .imagem-raiz {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
         
         /* ===== DIALETO LOCAL: CORRUPÇÃO VISUAL ===== */
 
@@ -513,53 +519,6 @@ body.dialeto-corrompido #mensagem-eli p {
         Serviços
     </a>
 
-    
-<!-- AVALIAÇÃO -->
-<section id="avaliacao" class="pagina">
-    <h2>Avalie nossos serviços</h2>
-
-    <p>
-        Sua opinião é importante para continuarmos aprimorando
-        nossas soluções.
-    </p>
-
-    <form onsubmit="enviarAvaliacao(event)">
-        <label for="nota-avaliacao">
-            Que nota você daria aos nossos serviços?
-        </label>
-
-        <input
-            type="range"
-            id="nota-avaliacao"
-            min="0"
-            max="10"
-            value="5"
-            step="1"
-            oninput="document.getElementById('valor-nota').textContent = this.value + '/10'"
-        >
-
-        <span id="valor-nota">5/10</span>
-
-        <label for="feedback-avaliacao">
-            Deixe seu feedback por escrito:
-        </label>
-
-        <textarea
-            id="feedback-avaliacao"
-            placeholder="Escreva sua opinião aqui..."
-            required
-        ></textarea>
-
-        <button type="submit">Enviar avaliação</button>
-        <button type="button" onclick="mostrar('home')">
-            Voltar
-        </button>
-
-        <p id="mensagem-avaliacao"></p>
-    </form>
-</section>
-
-
     <!-- PARCEIROS -->
     <a href="#" onclick="mostrar('parceiros'); return false;">
         <img
@@ -580,6 +539,31 @@ body.dialeto-corrompido #mensagem-eli p {
         >
         Sobre Nós
     </a>
+
+<!-- ABA HBV -->
+<a href="#" id="aba-hbv"
+   onclick="mostrar('hbv'); return false;"
+   style="display: none;">
+    <img
+        class="icone"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjTOqAvlq4jL0AZhy8Ckse_wensxhyBTKFToT3SfZ20ASGNMuZTmaGuIIoRrKlFJaoKNdIkJaADRBf-75Wkc8BxoZsVS5-LcC1m73yVmZRjhNWdTmm9rGshHrKjq7C68o0SxklP9cxleSlwDOTP9TKTuEf7Sb_pD3t4OpiWsJJaN6YWOeThAXfOUvFbhWqW/s1600/image.png"
+        alt="Capa HBV"
+    >
+    HBV
+</a>
+
+<!-- ABA RAÍZ -->
+<a href="#" id="aba-raiz"
+   onclick="mostrar('raiz'); return false;"
+   style="display: none;">
+    <img
+        class="icone"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiTPrWBDb4s2ZUx0nDjiciovWCuxK0odUcv7VvpjT0yOBeXn2cMDO33-UOMEqRoEeNvQ-stY4x-eLnNza9__JOhrwa4Uy6ATVC94WiuzJSBy5jcpbzW8pLQMEfpy5cGgsqwdOqzOVCDlXAQSMbffMFPjmleTtCS_uICgAAlqEa_Lh74M2acksxjzvErd4J7/s1600/image.png"
+        alt="Ícone Raíz"
+    >
+    Raíz
+</a>
+    
 </nav>
 
 
@@ -700,12 +684,134 @@ body.dialeto-corrompido #mensagem-eli p {
     <p>nos transformou na melhor versão de nós mesmos</p>
 </div> 
 
+    <h2>██████████</h2>
+    <p>nos transformou na melhor versão de nós mesmos</p>
+    
     <h2>Investidores Internos</h2>
     <p>
         A maioria dos nossos colaboradores atingiram sucesso
         ao ponto de poderem contribuir com nosso desenvolvimento.
         E, consequentemente, o deles também.
     </p>
+</section>
+
+<!-- PÁGINA SECRETA HBV -->
+<section id="hbv" class="pagina">
+    <h2>HBV</h2>
+
+    <p>
+        Em 1945, rumores de homens estranhos e bem-vestidos
+        visitando o Acampamento começaram a circular.
+    </p>
+
+    <p>
+        Diz-se que os homens pediam para entrar na cabana do
+        administrador do campo, todas as noites, durante anos.
+    </p>
+
+    <p>
+        Certa noite, um acordo foi feito com os homens
+        bem-vestidos, e eles deixaram o acampamento, até o
+        Acampamento Lunar de Aki entrar no seu maior colapso
+        alguns anos depois.
+    </p>
+
+    <p>
+        Quando os homens apareceram novamente, décadas depois,
+        um novo contrato foi feito, com o sucessor do local da época.
+    </p>
+
+    <p>
+        A glória resplandece no Acampamento.
+    </p>
+</section>
+            
+<section id="raiz" class="pagina">
+    <h2>Raíz</h2>
+
+    <h2>Relatório de Infecção</h2>
+
+    <ul>
+        <li>
+            <strong>Infecção:</strong>
+            Começa com um bulbo cutâneo oco de 2 a 10 cm que se
+            solidifica, iniciando a fase de enraizamento.
+        </li>
+
+        <li>
+            <strong>Progressão:</strong>
+            As raízes crescem para dentro até atingirem o esqueleto,
+            ramificando-se pelos tecidos e causando inflamação severa,
+            descoloração e espasmos musculares.
+        </li>
+
+        <li>
+            <strong>Desfecho:</strong>
+            Os hospedeiros evoluem para a fase de brotamento e são
+            transformados em uma abominação carnuda e imóvel conhecida
+            como "Zombaria da Natureza". A vítima fica reduzida a nervos,
+            veias e artérias, embora mantenha uma forma sombria de consciência.
+        </li>
+
+        <li>
+            <strong>Diagnóstico:</strong>
+            Avaliado por sinais como a presença de bulbos, espasmos
+            musculares, odores estranhos, perda da capacidade de sonhar
+            e crescimento ósseo anômalo.
+        </li>
+    </ul>
+
+    <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiB1rqRpJ6nhUtl7aqLaR8FHtlRWCA5FeHNj_J3SZWR_zKd1DOECotOTaGBJxzhqQu-DcBEgYBy5wUZBS2fVq8wKPrgLCOckEu3TXRfR8hwwDXKRNfulgBmxljTHK47G9PwVbSL2qVHO6DS4T5bWCxMXfIgTmF4eP2mIJvxRDpAZIinLsVkePr2f7EtNFfy/s1600/image.png"
+        alt="Imagem complementar do relatório"
+        class="imagem-raiz"
+    >
+</section>
+
+
+            <!-- AVALIAÇÃO -->
+<section id="avaliacao" class="pagina">
+    <h2>Avalie nossos serviços</h2>
+
+    <p>
+        Sua opinião é importante para continuarmos aprimorando
+        nossas soluções.
+    </p>
+
+    <form onsubmit="enviarAvaliacao(event)">
+        <label for="nota-avaliacao">
+            Que nota você daria aos nossos serviços?
+        </label>
+
+        <input
+            type="range"
+            id="nota-avaliacao"
+            min="0"
+            max="10"
+            value="5"
+            step="1"
+            oninput="document.getElementById('valor-nota').textContent = this.value + '/10'"
+        >
+
+        <span id="valor-nota">5/10</span>
+
+        <label for="feedback-avaliacao">
+            Deixe seu feedback por escrito:
+        </label>
+
+        <textarea
+            id="feedback-avaliacao"
+            placeholder="Escreva sua opinião aqui..."
+            required
+        ></textarea>
+
+        <button type="submit">Enviar avaliação</button>
+        <button type="button" onclick="mostrar('home')">
+            Voltar
+        </button>
+
+        <p id="mensagem-avaliacao"></p>
+    </form>
 </section>
 
 
@@ -787,12 +893,12 @@ body.dialeto-corrompido #mensagem-eli p {
     Ajuda
 </button>
 
-        <button
-            type="button"
-            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-        >
-            Voltar ao Topo
-        </button>
+<button
+    type="button"
+    onclick="voltarAoTopoEspecial()"
+>
+    Voltar ao Topo
+</button>
     </div>
 
     Copyright © 1935 HBV Inc.
@@ -806,43 +912,110 @@ body.dialeto-corrompido #mensagem-eli p {
 
 <!-- FUNCIONAMENTO DAS ABAS -->
 <script>
-    
-function mostrar(pagina) {
-    const paginas = document.querySelectorAll(".pagina");
 
-    paginas.forEach(function(item) {
-        item.classList.remove("ativa");
+let paginaAtual = 'home';
+
+function mostrar(pagina) {
+    paginaAtual = pagina;
+
+    document.querySelectorAll('.pagina').forEach(p => {
+        p.style.display = 'none';
     });
 
-    document.getElementById(pagina).classList.add("ativa");
+    document.getElementById(pagina).style.display = 'block';
 
-    const anuncios = document.querySelector("aside");
+    const sidebar = document.querySelector('aside');
 
-    if (pagina === "avaliacao") {
-        anuncios.style.display = "none";
-    } else {
-        anuncios.style.display = "";
+    if (sidebar) {
+        sidebar.style.display = 'block';
     }
 }
+    
+const URL_IMAGEM_SECRETA =
+    "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicssZJFCBfiUNSPCA3MZUVnFK7zcC0hFPxg6pOexPDLBZTmrTdkGE2OehHOrmHvF8s4J9R4nsLJ80zk6BchCjbS1SOiLzHRkQXDhoyh61w64J_gX1edLPVhDRQsV1TY5hHxsrvmKmcYunmtEFHul5k6j6rpF_3oZoxN_Ahldabv2UFW5gvW871wTYHoawy/s1600/image.png";
+
+let imagemSecretaArrastada = false;
+
+const campoFeedback =
+    document.getElementById("feedback-avaliacao");
+
+campoFeedback.addEventListener("dragover", function(event) {
+    event.preventDefault();
+});
+
+campoFeedback.addEventListener("drop", function(event) {
+    event.preventDefault();
+
+    const dados = event.dataTransfer;
+
+    const dadosArrastados = [
+        dados.getData("text/uri-list"),
+        dados.getData("text/plain"),
+        dados.getData("text/html")
+    ].join(" ");
+
+    // Confere se os dados contêm o endereço da imagem secreta.
+    if (dadosArrastados.includes(URL_IMAGEM_SECRETA)) {
+        imagemSecretaArrastada = true;
+
+        campoFeedback.value +=
+            (campoFeedback.value ? "\n" : "") +
+            "[Imagem anexada]";
+    }
+});
+
 
     
+
 function enviarAvaliacao(event) {
     event.preventDefault();
 
-    const nota = document.getElementById('nota-avaliacao').value;
-    const feedback = document.getElementById('feedback-avaliacao').value;
-    const mensagem = document.getElementById('mensagem-avaliacao');
+    const nota =
+        document.getElementById("nota-avaliacao").value;
 
-    mensagem.textContent =
-        'Avaliação registrada. Nota: ' + nota + '/10. Obrigado pelo feedback.';
+    const feedback =
+        document.getElementById("feedback-avaliacao").value;
 
-    console.log('Nota:', nota);
-    console.log('Feedback:', feedback);
+    const mensagem =
+        document.getElementById("mensagem-avaliacao");
+
+    if (imagemSecretaArrastada) {
+        document.getElementById("aba-raiz").style.display =
+            "inline-block";
+
+        mensagem.textContent =
+            "Avaliação registrada. Obrigado pelo feedback.";
+
+        imagemSecretaArrastada = false;
+    } else {
+        mensagem.textContent =
+            "Avaliação registrada. Nota: " + nota +
+            "/10. Obrigado pelo feedback.";
+    }
+
+    console.log("Nota:", nota);
+    console.log("Feedback:", feedback);
 }
+
 
 </script>
 
 <script>
+
+function voltarAoTopoEspecial() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+
+    const modoDistorcido =
+        document.body.classList.contains('dialeto-corrompido');
+
+    if (modoDistorcido && paginaAtual === 'sobre') {
+        document.getElementById('aba-hbv').style.display =
+            'inline-block';
+    }
+}
 
     let cliquesAjuda = 0;
 let inicioCliquesAjuda = 0;
