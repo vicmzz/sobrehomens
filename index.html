@@ -133,6 +133,50 @@
                 flex-wrap: wrap;
             }
         }
+        
+.anuncio-imagem {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+        
+/* QUADRADO DE TRADUÇÃO */
+#tradutor {
+    position: fixed;
+    bottom: 12px;
+    left: 12px;
+    width: 190px;
+    padding: 12px;
+    background-color: #eeeeee;
+    border: 2px solid black;
+    box-shadow: 3px 3px 0 #999999;
+    z-index: 9999;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+#tradutor strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#tradutor select {
+    width: 100%;
+    padding: 5px;
+    font-size: 12px;
+    background-color: white;
+    border: 1px solid gray;
+}
+
+#mensagem-traducao {
+    display: block;
+    margin-top: 8px;
+    font-size: 10px;
+    color: #444444;
+}
+
     </style>
 </head>
 
@@ -288,42 +332,46 @@
         </main>
 
         <!-- ANÚNCIOS LATERAIS -->
-        <aside>
+       
+<aside>
+    <img
+        class="anuncio-imagem"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEicssZJFCBfiUNSPCA3MZUVnFK7zcC0hFPxg6pOexPDLBZTmrTdkGE2OehHOrmHvF8s4J9R4nsLJ80zk6BchCjbS1SOiLzHRkQXDhoyh61w64J_gX1edLPVhDRQsV1TY5hHxsrvmKmcYunmtEFHul5k6j6rpF_3oZoxN_Ahldabv2UFW5gvW871wTYHoawy/s1600/image.png"
+        alt="Anúncio 1"
+    >
 
-            <div class="anuncio">
-                <p>O futuro está chegando!</p>
+    <img
+        class="anuncio-imagem"
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhYGb7fSJy8GfZooAff1SQW-bTn75wKg7P5Gw15orjK4feMb-xC5JhIfHapJ_xv7HsZy74AXIgEgLJ_vS7XHptLCHzRLiRfSjYf2v1gjHmCZPxXU4kM2-lsRRq9YhPWeO_WJ5kh1CU-sFseuREgQkRiUVtR3mVh-QUZZWkVKJdZ40pWQw7USnyWPluCTF5Q/s1600/image.png"
+        alt="Anúncio 2"
+    >
+</aside>
 
-                <div style="font-size: 60px;">
-                    ☂️
-                </div>
-
-                <p>
-                    Não fique para trás!
-                    <br>
-                    <strong>Conecte-se!</strong>
-                </p>
-            </div>
-
-            <div class="promocao">
-                $$$ OFERTAS $$$
-            </div>
-
-            <div class="anuncio">
-                <h2>GRANDES NOVIDADES!</h2>
-
-                <p>
-                    Descubra novas possibilidades
-                    com a ÓRBITA TECH.
-                </p>
-
-                <div style="font-size: 45px;">
-                    🌐
-                </div>
-            </div>
-
-        </aside>
 
     </div>
+
+    
+<!-- QUADRADO DE TRADUÇÃO -->
+<div id="tradutor">
+    <strong>🌐 Traduzir a página</strong>
+
+    <select id="idioma" onchange="traduzirPagina()">
+        <option value="">Escolha um idioma</option>
+        <option value="pt">Português (BR)</option>
+        <option value="en">English (Inglês)</option>
+        <option value="ko">한국어 (Coreano)</option>
+        <option value="fr">Français (Francês)</option>
+        <option value="ty">Reo Tahiti (Tahitiano)</option>
+        <option value="local">Dialeto local</option>
+    </select>
+
+    <div id="google_translate_element"
+         style="display:none;"></div>
+
+    <small id="mensagem-traducao">
+        Selecione um idioma.
+    </small>
+</div>
 
     <!-- RODAPÉ -->
     <footer>
@@ -345,6 +393,53 @@
 
         document.getElementById(pagina).classList.add("ativa");
     }
+</script>
+
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'pt',
+            includedLanguages: 'en,ko,fr,pt,ty',
+            autoDisplay: false
+        }, 'google_translate_element');
+    }
+
+    function traduzirPagina() {
+        const idioma = document.getElementById('idioma').value;
+        const mensagem = document.getElementById('mensagem-traducao');
+
+        if (idioma === 'local') {
+            mensagem.textContent =
+                'Dialeto local: tradução personalizada ainda não configurada.';
+            return;
+        }
+
+        if (!idioma) {
+            mensagem.textContent = 'Selecione um idioma.';
+            return;
+        }
+
+        const seletor = document.querySelector(
+            '.goog-te-combo'
+        );
+
+        if (!seletor) {
+            mensagem.textContent =
+                'O tradutor está carregando. Tente novamente em instantes.';
+            return;
+        }
+
+        seletor.value = idioma;
+        seletor.dispatchEvent(
+            new Event('change')
+        );
+
+        mensagem.textContent = 'Solicitando tradução...';
+    }
+</script>
+
+<script
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </script>
 
 </body>
