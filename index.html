@@ -25,7 +25,7 @@ header {
     width: 100%;
     height: 180px;
     box-sizing: border-box;
-    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjbb4LpKIcfUYtElgpMn2vSCs_VNulxv3J_DWxUH8oomgFXW6Ii6Xcq1JvhSGEE3m2bqumAaYSJq8uLSKboAjGXnNYIXyCoIaA2lMSzkc1sTwG-fywduLzZngjKgR89AFr2geKeVT_-y2n8O8X3CvmtAUVQKOTSiZoNZML9EdlXTs4fkyhn4QeCcQ3rtXE/s1600/image.png");
+    background-image: url("https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhl1elLd6v4uQ7KNr0l772UbfOWQjrWNYDsyQJQMvBvuAfU4oh6SOVwEitcY2_OmEQ_gtWzHPcbBTLOeLf9DF7X1NLsPckiieHS1HPdiubsJV2e1R5B_x6rlM4OXQgdOXZwJFsnVLuU9GPae2NHjsADBXpozYEwCg-kNBwG6PA2CPsEVbS2rDyPPS5Rz7t-/s1600/image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -240,6 +240,99 @@ header p {
     font-size: 11px;
 }
 
+        
+/* ===== BOTÕES DO RODAPÉ ===== */
+
+.botoes-rodape {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.botoes-rodape button {
+    background: white;
+    color: darkblue;
+    border: none;
+    font-family: Georgia, serif;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.botoes-rodape button:hover {
+    color: #666;
+}
+
+/* ===== PÁGINA DE AVALIAÇÃO ===== */
+
+#avaliacao {
+    padding: 10px;
+}
+
+#avaliacao label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+}
+
+#nota-avaliacao {
+    width: 100%;
+    cursor: pointer;
+}
+
+#valor-nota {
+    display: block;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+#feedback-avaliacao {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 130px;
+    padding: 10px;
+    resize: vertical;
+    font-family: Arial, sans-serif;
+    border: 1px solid #999;
+}
+
+#avaliacao button {
+    margin-top: 12px;
+    padding: 8px 14px;
+    background: white;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+#avaliacao button:hover {
+    background: #eee;
+}
+
+#mensagem-avaliacao {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+body.dialeto-corrompido .botoes-rodape button,
+body.dialeto-corrompido #avaliacao button {
+    background: #650000;
+    color: #ffaaaa;
+    border: 1px solid #ffaaaa;
+}
+
+body.dialeto-corrompido #feedback-avaliacao {
+    background: #2a0000;
+    color: #ffaaaa;
+    border: 1px solid #ffaaaa;
+}
+
+        
         /* ===== DIALETO LOCAL: CORRUPÇÃO VISUAL ===== */
 
 body.dialeto-corrompido {
@@ -385,6 +478,8 @@ body.dialeto-corrompido #mensagem-eli p {
 
 <body>
 
+    <audio id="audio-ajuda" src="ajuda.mp3" preload="auto"></audio>
+    
 <div class="site">
 
     <!-- CABEÇALHO -->
@@ -418,6 +513,53 @@ body.dialeto-corrompido #mensagem-eli p {
         Serviços
     </a>
 
+    
+<!-- AVALIAÇÃO -->
+<section id="avaliacao" class="pagina">
+    <h2>Avalie nossos serviços</h2>
+
+    <p>
+        Sua opinião é importante para continuarmos aprimorando
+        nossas soluções.
+    </p>
+
+    <form onsubmit="enviarAvaliacao(event)">
+        <label for="nota-avaliacao">
+            Que nota você daria aos nossos serviços?
+        </label>
+
+        <input
+            type="range"
+            id="nota-avaliacao"
+            min="0"
+            max="10"
+            value="5"
+            step="1"
+            oninput="document.getElementById('valor-nota').textContent = this.value + '/10'"
+        >
+
+        <span id="valor-nota">5/10</span>
+
+        <label for="feedback-avaliacao">
+            Deixe seu feedback por escrito:
+        </label>
+
+        <textarea
+            id="feedback-avaliacao"
+            placeholder="Escreva sua opinião aqui..."
+            required
+        ></textarea>
+
+        <button type="submit">Enviar avaliação</button>
+        <button type="button" onclick="mostrar('home')">
+            Voltar
+        </button>
+
+        <p id="mensagem-avaliacao"></p>
+    </form>
+</section>
+
+
     <!-- PARCEIROS -->
     <a href="#" onclick="mostrar('parceiros'); return false;">
         <img
@@ -427,6 +569,8 @@ body.dialeto-corrompido #mensagem-eli p {
         >
         Parceiros
     </a>
+    
+
         <!-- SOBRE NÓS -->
     <a href="#" onclick="mostrar('sobre'); return false;">
         <img
@@ -631,30 +775,104 @@ body.dialeto-corrompido #mensagem-eli p {
 </div>
 
     <!-- RODAPÉ -->
-    <footer>
-        Copyright © 1935 HBV Inc.
-        <br>
-        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤSite desenvolvido utilizando Sistema Computacional Raíz por ████████████████████™
-        ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-        Site hospedado e em operação a partir do Armazenamento Lógico PYF™ do Programa Recreativo da Ilha de Páscoa e Polinésia Francesa (PRIPP)™
-    </footer>
+  
+<!-- RODAPÉ -->
+<footer>
+    <div class="botoes-rodape">
+        <button type="button" onclick="mostrar('avaliacao')">
+            Nos Avalie
+        </button>
+
+<button type="button" onclick="clicarAjuda()">
+    Ajuda
+</button>
+
+        <button
+            type="button"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+            Voltar ao Topo
+        </button>
+    </div>
+
+    Copyright © 1935 HBV Inc.
+    <br>
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤSite desenvolvido utilizando Sistema Computacional Raíz por ████████████████████™
+    ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
+    Site hospedado e em operação a partir do Armazenamento Lógico PYF™ do Programa Recreativo da Ilha de Páscoa e Polinésia Francesa (PRIPP)™
+</footer>
 
 </div>
 
 <!-- FUNCIONAMENTO DAS ABAS -->
 <script>
-    function mostrar(pagina) {
-        const paginas = document.querySelectorAll(".pagina");
+    
+function mostrar(pagina) {
+    const paginas = document.querySelectorAll(".pagina");
 
-        paginas.forEach(function(item) {
-            item.classList.remove("ativa");
-        });
+    paginas.forEach(function(item) {
+        item.classList.remove("ativa");
+    });
 
-        document.getElementById(pagina).classList.add("ativa");
+    document.getElementById(pagina).classList.add("ativa");
+
+    const anuncios = document.querySelector("aside");
+
+    if (pagina === "avaliacao") {
+        anuncios.style.display = "none";
+    } else {
+        anuncios.style.display = "";
     }
+}
+
+    
+function enviarAvaliacao(event) {
+    event.preventDefault();
+
+    const nota = document.getElementById('nota-avaliacao').value;
+    const feedback = document.getElementById('feedback-avaliacao').value;
+    const mensagem = document.getElementById('mensagem-avaliacao');
+
+    mensagem.textContent =
+        'Avaliação registrada. Nota: ' + nota + '/10. Obrigado pelo feedback.';
+
+    console.log('Nota:', nota);
+    console.log('Feedback:', feedback);
+}
+
 </script>
 
 <script>
+
+    let cliquesAjuda = 0;
+let inicioCliquesAjuda = 0;
+
+function clicarAjuda() {
+    const agora = Date.now();
+    const limiteTempo = 10000;
+    const limiteCliques = 20;
+
+    if (
+        inicioCliquesAjuda === 0 ||
+        agora - inicioCliquesAjuda >= limiteTempo
+    ) {
+        cliquesAjuda = 1;
+        inicioCliquesAjuda = agora;
+        return;
+    }
+
+    cliquesAjuda++;
+
+    if (cliquesAjuda >= limiteCliques) {
+        const audio = document.getElementById('audio-ajuda');
+
+        audio.currentTime = 0;
+        audio.play();
+
+        cliquesAjuda = 0;
+        inicioCliquesAjuda = 0;
+    }
+}
     function googleTranslateElementInit() {
         new google.translate.TranslateElement({
             pageLanguage: 'pt',
