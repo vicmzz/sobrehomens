@@ -240,6 +240,146 @@ header p {
     font-size: 11px;
 }
 
+        /* ===== DIALETO LOCAL: CORRUPÇÃO VISUAL ===== */
+
+body.dialeto-corrompido {
+    background: #ff0000;
+    color: #160000;
+    overflow-x: auto;
+    animation: pulsar-fundo 2s infinite steps(2, end);
+}
+
+body.dialeto-corrompido .site {
+    width: 1100px;
+    max-width: none;
+    margin-left: 2%;
+    filter: contrast(1.8) saturate(2);
+}
+
+body.dialeto-corrompido header,
+body.dialeto-corrompido .anuncio {
+    background-color: #650000;
+    background-blend-mode: multiply;
+    filter: contrast(2);
+}
+
+body.dialeto-corrompido h1,
+body.dialeto-corrompido h2,
+body.dialeto-corrompido p,
+body.dialeto-corrompido small,
+body.dialeto-corrompido a,
+body.dialeto-corrompido footer {
+    color: #3b0000;
+    text-shadow: 2px 0 #ffaaaa, -2px 1px #5b0000;
+    letter-spacing: 3px;
+    word-spacing: 9px;
+}
+
+body.dialeto-corrompido h2 {
+    font-size: 31px;
+    transform: scaleX(1.35) rotate(-1deg);
+    transform-origin: left;
+}
+
+body.dialeto-corrompido p {
+    line-height: 1.1;
+    transform: scaleX(1.12) skewX(-3deg);
+    transform-origin: left;
+}
+
+body.dialeto-corrompido .conteudo {
+    width: 115%;
+    gap: 55px;
+    align-items: flex-start;
+}
+
+body.dialeto-corrompido main {
+    min-width: 650px;
+}
+
+body.dialeto-corrompido aside {
+    width: 260px;
+}
+
+body.dialeto-corrompido img {
+    filter: sepia(1) saturate(7) hue-rotate(310deg) contrast(1.5);
+    transform: scaleX(1.2) scaleY(0.82) rotate(-2deg);
+}
+
+body.dialeto-corrompido .menu a:nth-child(2) img {
+    transform: scaleX(0.65) scaleY(1.4) rotate(8deg);
+}
+
+body.dialeto-corrompido .menu a:nth-child(3) img {
+    transform: scaleX(1.5) scaleY(0.7) rotate(-9deg);
+}
+
+body.dialeto-corrompido .menu a:nth-child(4) img {
+    transform: scaleX(0.8) scaleY(1.3) rotate(4deg);
+}
+
+body.dialeto-corrompido #tradutor {
+    background: #720000;
+    color: #fff;
+    border: 3px dashed #ffbaba;
+    box-shadow: 7px 5px 0 #330000;
+}
+
+body.dialeto-corrompido #tradutor * {
+    color: #fff;
+}
+
+body.dialeto-corrompido footer {
+    width: 120%;
+    font-size: 18px;
+    background: #9b0000;
+}
+
+body.dialeto-corrompido .letra-corrompida {
+    display: inline-block;
+    line-height: 0.85;
+    vertical-align: baseline;
+    transform-origin: center;
+}
+
+@keyframes pulsar-fundo {
+    0% { background-color: #ff0000; }
+    50% { background-color: #b00000; }
+    100% { background-color: #ff1717; }
+}
+
+        /* Mensagem especial de Eli Nadler */
+#mensagem-eli {
+    display: none;
+}
+
+body.dialeto-corrompido #mensagem-eli {
+    display: block;
+    margin: 25px 0;
+    padding: 12px;
+    background: rgba(255, 0, 0, 0.18);
+    border-left: 4px solid #650000;
+    width: 95%;
+    box-sizing: border-box;
+}
+
+body.dialeto-corrompido #mensagem-eli h2 {
+    color: #210000;
+    font-size: 27px;
+    letter-spacing: 2px;
+    transform: rotate(-1deg) scaleX(1.08);
+    text-shadow: 1px 1px #ff7777;
+}
+
+body.dialeto-corrompido #mensagem-eli p {
+    color: #300000;
+    font-size: 19px;
+    line-height: 1.65;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    transform: rotate(-0.3deg) scaleX(1.02);
+    text-shadow: 1px 0 #ff7777;
+}
     </style>
 </head>
 
@@ -332,7 +472,7 @@ header p {
                 </p>
 
                 <p>
-                    Nosso objetivo é fazer com que nosso tempo seja o mais otimizdo possível, evitando contratempos e variáveis indesejadas pelo caminho já definido.
+                    Nosso objetivo é fazer com que nosso tempo seja o mais otimizdo possível, evitando contratempos e variáveis indesejadas pelo caminho já definido. Nos comunicamos por contratos e nosso lema é "Jogos justos sempre acabam em empate"
                 </p>
 
                 <h2>Nossa missão</h2>
@@ -376,10 +516,17 @@ header p {
                 </p>
 
                 <h2>Evolução</h2>
-                <p>
-                    Clique no link abaixo para entender a solução:
-                    www.hbvsisinterno.com/administradores/registrospessoais/lukafuchs/progutilitário
-                </p>
+               
+<p>
+    Clique no link abaixo para entender a solução:
+    <a
+        id="link-evolucao"
+        href="#"
+        onclick="if (document.body.classList.contains('dialeto-corrompido')) { window.location.href = 'https://vicmzz.github.io/HBVsisInterno/'; } return false;"
+        style="color: blue; text-decoration: underline; cursor: pointer;"
+    >www.hbvsisinterno.com/administradores/registrospessoais/lukafuchs/progutilitário</a>
+</p>
+
             </section>
             
 <!-- NOSSOS PARCEIROS -->
@@ -404,10 +551,10 @@ header p {
         nossa sede em Teahupo'o. 
     </p>
 
+     <div id="mensagem-eli">
     <h2>██████████</h2>
-    <p>
-Nos transformou na melhor versão de nós mesmos    
-    </p>
+    <p>nos transformou na melhor versão de nós mesmos</p>
+</div> 
 
     <h2>Investidores Internos</h2>
     <p>
@@ -519,6 +666,9 @@ Nos transformou na melhor versão de nós mesmos
 
 function traduzirPagina() {
     const idioma = document.getElementById('idioma').value;
+    if (idioma !== 'local') {
+    limparDialetoCorrompido();
+}
     const mensagem = document.getElementById('mensagem-traducao');
     const caixaSenha = document.getElementById('caixa-senha');
     const campoSenha = document.getElementById('senha-local');
@@ -554,24 +704,115 @@ function traduzirPagina() {
     mensagem.textContent = 'Solicitando tradução...';
 }
 
+function corromperTextos() {
+    const area = document.querySelector('.site');
+
+    if (!area || area.dataset.corrompida === 'sim') return;
+
+    area.dataset.corrompida = 'sim';
+
+    const elementos = area.querySelectorAll(
+        'h1, h2, p, small, a, footer, nav, section, aside'
+    );
+
+    elementos.forEach(function(elemento) {
+        const walker = document.createTreeWalker(
+            elemento,
+            NodeFilter.SHOW_TEXT
+        );
+
+        const nos = [];
+        let no;
+
+        while ((no = walker.nextNode())) {
+            if (
+                no.textContent.trim() &&
+                !no.parentElement.closest('script, style, input, button')
+            ) {
+                nos.push(no);
+            }
+        }
+
+        nos.forEach(function(noTexto) {
+            const fragmento = document.createDocumentFragment();
+
+            for (const caractere of noTexto.textContent) {
+                if (caractere.trim() === '') {
+                    fragmento.appendChild(
+                        document.createTextNode(caractere)
+                    );
+                    continue;
+                }
+
+                const letra = document.createElement('span');
+                letra.className = 'letra-corrompida';
+                letra.textContent = caractere;
+
+                const tamanho = 9 + Math.random() * 29;
+                const inclinacao = Math.random() * 50 - 25;
+                const largura = 0.5 + Math.random() * 1.8;
+                const altura = 0.6 + Math.random() * 1.7;
+
+                letra.style.fontSize = tamanho + 'px';
+                letra.style.transform =
+                    `rotate(${inclinacao}deg) scale(${largura}, ${altura})`;
+
+                fragmento.appendChild(letra);
+            }
+
+            noTexto.replaceWith(fragmento);
+        });
+    });
+}
+
+function limparDialetoCorrompido() {
+    document.body.classList.remove('dialeto-corrompido');
+
+    const area = document.querySelector('.site');
+
+    if (area) {
+        area.querySelectorAll('.letra-corrompida').forEach(function(letra) {
+            letra.replaceWith(document.createTextNode(letra.textContent));
+        });
+
+        area.normalize();
+        delete area.dataset.corrompida;
+    }
+}
+
 function verificarSenha(event) {
     event.preventDefault();
 
     const senha = document.getElementById('senha-local').value;
     const mensagem = document.getElementById('mensagem-senha');
 
-    // ALTERE ESTA SENHA PARA A QUE VOCÊ QUISER
-    const senhaCorreta = 'HBV1935';
+    const senhaCorreta = 'contrato';
 
-    if (senha === senhaCorreta) {
-        mensagem.textContent = 'Acesso autorizado. Bem-vindo.';
-        mensagem.style.color = 'green';
+    if (senha.toLowerCase() === senhaCorreta) {
+        document.body.classList.add('dialeto-corrompido');
 
-        // Aqui você pode liberar o conteúdo do dialeto local
+        corromperTextos();
+
+        const mensagemEli = document.getElementById('mensagem-eli');
+
+mensagemEli.innerHTML = `
+    <h2>Eli Nadler</h2>
+    <p>
+        Eli nos transformou na melhor versão de nós mesmos,
+        Eli, Eli Nadler! Sua salvação chegará por Eli,
+        Eli nos salvou, salvou todos que cruzaram seu caminho,
+        Eli, é um privilégio ser um pilar de Eli Nadler!
+    </p>
+`;
+
+        mensagem.textContent = 'ACESSO CONCEDIDO.';
+        mensagem.style.color = '#ff0000';
+
         document.getElementById('mensagem-traducao').textContent =
-            'Dialeto local desbloqueado.';
+            'D̷i̷a̷l̷e̷t̷o̷ ̷l̷o̷c̷a̷l̷ ̷d̷e̷s̷b̷l̷o̷q̷u̷e̷a̷d̷o̷.';
+
     } else {
-        mensagem.textContent = 'Senha incorreta. Acesso negado.';
+        mensagem.textContent = 'SENHA INCORRETA. ACESSO NEGADO.';
         mensagem.style.color = 'red';
     }
 }
