@@ -20,7 +20,6 @@
             margin: 0 auto;
         }
 
-
 header {
     width: 100%;
     height: 180px;
@@ -479,6 +478,32 @@ body.dialeto-corrompido #mensagem-eli p {
     transform: rotate(-0.3deg) scaleX(1.02);
     text-shadow: 1px 0 #ff7777;
 }
+
+          /* Impede a tradução automática do quadrado de idiomas */
+#tradutor {
+    translate: no;
+}
+
+#tradutor,
+#tradutor * {
+    -webkit-translate: no;
+}
+        
+footer li {
+    list-style: none;
+}
+
+        
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+        .lista-sem-pontos {
+    list-style: none;
+    padding-left: 0;
+}
     </style>
 </head>
 
@@ -630,13 +655,19 @@ body.dialeto-corrompido #mensagem-eli p {
                     Consultas conosco e com nossa corporação abrem seu corpo para novas ideias revolucionárias, mais de 130 clientes satisfeitos.
                     </p>
                     
-                    <p>"A consultoria nos ajudou a entender a como utilizar do nosso corpo de uma maneira muito mais eficiente, necessário para qualquer pessoa" - Anastácio e Luka Fuchs sobre a consultoria de Equilíbrio Corporal.</p>
-                    <p>Segue abaixo todas as consultorias da nossa corporação disponíveis:</p>
-                
-                <p>Consultoria de Equilíbrio Corporal: Especializado em alinhar seu sistema interno para melhor funcionamento do corpo, prevenindo problemas durante o envelhecimento, e reprimindo pensamentos inoportúnos. E também diminuir sentimentos predatórios, como inveja, culpa excessiva, competitividade, repulso, etc.</p>
-                <p>Consultoria de Cuidados com a Pele: Especializado no tratamento de bulbos infeccionais com hidratantes e massagens corporais, o tratamento enraíza tão profundamente em sua pele que pode até mesmo fortificar seus ossos.</p>
-                <p>Consultoria de Gerenciamento de Tempo (feito por nós): Especializado em te ensinar como organizar melhor sua rotina, poupando tempo e tirando eventos desnecessários do dia-a-dia, otimizando seu tempo útil e de lazer.</p>
-                <p>Para contratar qualquer um desses serviços contate o email: univ.toulousehbvacess@gmail.com</p>
+<ul class="lista-sem-pontos">                   
+<li>"A consultoria nos ajudou a entender como utilizar nosso corpo de uma maneira muito mais eficiente, necessário para qualquer pessoa." — Anastácio e Luka Fuchs, sobre a consultoria de Equilíbrio Corporal.</li>
+
+<li>Segue abaixo todas as consultorias da nossa corporação disponíveis:</li> </ul>
+
+    <li>Consultoria de Equilíbrio Corporal: Especializada em alinhar seu sistema interno para melhor funcionamento do corpo, prevenindo problemas durante o envelhecimento e reprimindo pensamentos inoportunos. Também busca diminuir sentimentos predatórios, como inveja, culpa excessiva, competitividade e repulsa.</li>
+
+    <li>Consultoria de Cuidados com a Pele: Especializada no tratamento de bulbos infeccionais com hidratantes e massagens corporais. O tratamento enraíza tão profundamente na pele que pode até mesmo fortificar os ossos.</li>
+
+    <li>Consultoria de Gerenciamento de Tempo: Especializada em ensinar como organizar melhor a rotina, poupando tempo e eliminando eventos desnecessários do dia a dia.</li>
+
+    <p>Para contratar qualquer um desses serviços, contate o e-mail: univ.toulousehbvacess@gmail.com</p>
+
 
                 <h2>Pesquisa tecnológica</h2>
                 <p>
@@ -750,7 +781,7 @@ body.dialeto-corrompido #mensagem-eli p {
             Os hospedeiros evoluem para a fase de brotamento e são
             transformados em uma abominação carnuda e imóvel conhecida
             como "Zombaria da Natureza". A vítima fica reduzida a nervos,
-            veias e artérias, embora mantenha uma forma sombria de consciência.
+            veias e artérias, embora mantenha uma forma de consciência.
         </li>
 
         <li>
@@ -838,10 +869,10 @@ body.dialeto-corrompido #mensagem-eli p {
 
     
 <!-- QUADRADO DE TRADUÇÃO -->
-<div id="tradutor">
+<div id="tradutor" class="notranslate" translate="no">
     <strong>🌐 Traduzir a página</strong>
 
-    <select id="idioma" onchange="traduzirPagina()">
+  <select id="idioma" class="notranslate" translate="no" onchange="traduzirPagina()">
         <option value="">Escolha um idioma</option>
         <option value="pt">Português (BR)</option>
         <option value="en">English (Inglês)</option>
@@ -903,9 +934,11 @@ body.dialeto-corrompido #mensagem-eli p {
 
     Copyright © 1935 HBV Inc.
     <br>
-    ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤSite desenvolvido utilizando Sistema Computacional Raíz por ████████████████████™
-    ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ
-    Site hospedado e em operação a partir do Armazenamento Lógico PYF™ do Programa Recreativo da Ilha de Páscoa e Polinésia Francesa (PRIPP)™
+<ul>
+    <li>Site desenvolvido utilizando Sistema Computacional Raíz por ████████████████████™</li>
+    <li>Site hospedado e em operação a partir do Armazenamento Lógico PYF™ do PRIPP™</li>
+</ul>
+
 </footer>
 
 </div>
