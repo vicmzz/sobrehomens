@@ -625,7 +625,7 @@ footer ul {
                 </p>
 
                 <p>
-                    Nosso objetivo é fazer com que nosso tempo seja o mais otimizdo possível, evitando contratempos e variáveis indesejadas pelo caminho já definido. Nos comunicamos por contratos e nosso lema é "Jogos justos sempre acabam em empate"
+                    Nosso objetivo é fazer com que nosso tempo seja o mais otimizdo possível, evitando contratempos e variáveis indesejadas pelo caminho já definido. Nos comunicamos por contratos. E nosso lema é "Jogos justos sempre acabam em empate"
                 </p>
 
                 <h2>Nossa missão</h2>
@@ -673,6 +673,9 @@ footer ul {
                 <p>
                     Em nosso tempo vago, fazemos pesquisas e desenvolvemos criações cada vez mais inovadoras e relevantes para a sociedade. Nos últimos dias nós nos especializamos cada vez mais na área da produção de sistemas operacionais para otimizar tempo de pesquisa e desenvolvimento de programas.
                 </p>
+
+                <h2>Produtos Artesanais</h2>
+                <li></li>
 
                 <h2>Evolução</h2>
                
@@ -1210,9 +1213,9 @@ function verificarSenha(event) {
     const senha = document.getElementById('senha-local').value;
     const mensagem = document.getElementById('mensagem-senha');
 
-    const senhaCorreta = 'contrato';
+const senhasCorretas = ['contrato', 'contratos'];
 
-    if (senha.toLowerCase() === senhaCorreta) {
+if (senhasCorretas.includes(senha.trim().toLowerCase())) {
         document.body.classList.add('dialeto-corrompido');
 
         corromperTextos();
